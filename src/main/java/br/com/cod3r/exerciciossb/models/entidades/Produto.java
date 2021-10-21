@@ -17,24 +17,32 @@ public class Produto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@NotBlank
-	private String nome;
+	String nome;
+	String email; 
+	String cpf; 
+	String cep; 
+	String cidade; 
+	String estado;
 	
-	@Min(0)
-	private double preco;
-	
-	@Min(0)
-	@Max(1)
-	private double desconto;
+//	@Min(0)
+//	private double preco;
+//	
+//	@Min(0)
+//	@Max(1)
+//	private double desconto;
 
 	
-	public Produto(String nome, double preco, double desconto) {
-		super();
-		this.nome = nome;
-		this.preco = preco;
-		this.desconto = desconto;
-	}
-	
+	public Produto(int id, String nome, String email, String cpf, String cep, String cidade, String estado) {
+	super();
+	this.id = id;
+	this.nome = nome;
+	this.email = email;
+	this.cpf = cpf;
+	this.cep = cep;
+	this.cidade = cidade;
+	this.estado = estado;
+}
+
 	public Produto() {
 		
 	}
@@ -58,21 +66,49 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public double getPreco() {
-		return preco;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setPreco(double preco) {
-		this.preco = preco;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public double getDesconto() {
-		return desconto;
+	public String getCpf() {
+		return cpf;
 	}
 
-	public void setDesconto(double desconto) {
-		this.desconto = desconto;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	
+	
+	
 	
 	
 
