@@ -4,9 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
 
 
 
@@ -18,93 +16,56 @@ public class Produto {
 	private int id;
 	
 	String nome;
-	String email; 
-	String cpf; 
-	String cep; 
-	String cidade; 
-	String estado;
-	
-//	@Min(0)
-//	private double preco;
-//	
-//	@Min(0)
-//	@Max(1)
-//	private double desconto;
 
-	
-	public Produto(int id, String nome, String email, String cpf, String cep, String cidade, String estado) {
-	super();
-	this.id = id;
-	this.nome = nome;
-	this.email = email;
-	this.cpf = cpf;
-	this.cep = cep;
-	this.cidade = cidade;
-	this.estado = estado;
-}
+    @Min(0)
+    double preco;
+    
+    String descricao;
 
-	public Produto() {
-		
+	public Produto(int id, String nome, double preco, String descricao) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.preco = preco;
+		this.descricao = descricao;
 	}
 
 	public int getId() {
 		return id;
 	}
 
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
 
 	public String getNome() {
 		return nome;
 	}
 
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-	public String getEmail() {
-		return email;
+	public double getPreco() {
+		return preco;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPreco(double preco) {
+		this.preco = preco;
 	}
 
-	public String getCpf() {
-		return cpf;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
+	
 
-	public String getCep() {
-		return cep;
-	}
 
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-
-	public String getCidade() {
-		return cidade;
-	}
-
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-
-	public String getEstado() {
-		return estado;
-	}
-
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
+	
+	
 
 	
 	
